@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Faculty Navigation - Home</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+h1 {
+  color: #222;
+}
+
+p {
+  font-size: 18px;
+  color: #444;
+}
+
+.image-wrapper{
+  position:relative;
+  display:inline-block;
+}
+
+.image-wrapper img{
+  border:3px solid #333;
+  border-radius:8px;
+}
+
+
+.marker{
+  position:absolute;
+  font-size:16px;
+  font-weight:bold;
+  padding:4px 8px;
+  border-radius:6px;
+  color:white;
+}
+
+
+.library-marker{
+  background:#2a6df4;
+  left:70px;
+  top:350px;
+}
+
+
+.study-marker{
+  background:#e53935;
+  left:220px;
+  top:300px;
+}
+
+.note {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #666;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Faculty of Technology Navigation System</h1>
+
+<p>
+Welcome to the navigation system. Click on the correct area in the corridor image
+to go to the <strong>Library</strong> or <strong>Study Area</strong>.
+</p>
+
+<div class="image-wrapper">
+
+<img src="images/corridor.jpg"
+alt="Corridor Navigation"
+usemap="#corridorMap"
+width="460"
+height="599"/>
+
+
+<div class="marker library-marker" onclick="location.href='library_entrance.html'">📍 Library</div>
+<div class="marker study-marker" onclick="location.href='study_entrance.html'">📍 Study Area</div>
+
+<map name="corridorMap">
+
+
+<area
+shape="rect"
+coords="120,300,240,560"
+href="library_entrance.html"
+alt="Go to Library Entrance"
+title="Go to Library Entrance"
+/>
+
+
+<area
+shape="rect"
+coords="210,140,320,330"
+href="study_entrance.html"
+alt="Go to Study Area Entrance"
+title="Go to Study Area Entrance"
+/>
+
+</map>
+
+</div>
+
+<p class="note">
+Click the blue marker area for Library or the red marker area for Study Area.
+</p>
+
+</div>
+
+</body>
+</html>

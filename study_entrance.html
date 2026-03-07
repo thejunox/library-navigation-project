@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Study Area Entrance</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+h1 {
+  color: #222;
+}
+
+p {
+  font-size: 18px;
+  color: #444;
+}
+
+
+.image-wrapper{
+  position:relative;
+  display:inline-block;
+}
+
+.image-wrapper img{
+  border: 3px solid #333;
+  border-radius: 8px;
+  margin-top: 15px;
+  max-width: 50%;
+  height: auto;
+}
+
+
+.marker{
+  position:absolute;
+  background:#e53935;
+  color:white;
+  font-weight:bold;
+  padding:6px 10px;
+  border-radius:6px;
+  font-size:10px;
+}
+
+
+.study-marker{
+  left:30%;
+  top:10%;
+}
+
+.btn {
+  display: inline-block;
+  margin: 15px 10px 0;
+  padding: 12px 20px;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.btn:hover {
+  background-color: #555;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Study Area Entrance</h1>
+<p>Click on the door to enter the Study Area.</p>
+
+<div class="image-wrapper">
+
+<img src="images/dg02.jpg"
+alt="Study Area Entrance"
+usemap="#studyDoorMap"
+width="1204"
+height="1600" />
+
+
+<div class="marker study-marker" onclick="location.href='study_inside.html'">📍 Enter Study Area</div>
+
+<map name="studyDoorMap">
+<area
+shape="rect"
+coords="34,116,284,649"
+href="study_inside.html"
+alt="Enter Study Area"
+title="Enter Study Area"
+/>
+</map>
+
+</div>
+
+<a class="btn" href="index.html">Back to Home</a>
+
+</div>
+
+</body>
+</html>
